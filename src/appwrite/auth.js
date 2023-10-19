@@ -19,7 +19,7 @@ constructor() {
       const userAccount = await this.account.create(
         ID.unique(),
         email,
-        password,
+        password, 
         name
       );
       if (userAccount) {
@@ -33,7 +33,7 @@ constructor() {
   } 
   async login({ email, password }) {
     // eslint-disable-next-line no-useless-catch
-    try {
+    try { 
       return await this.account.createEmailSession(email, password);
     } catch (error) {
       throw error;
